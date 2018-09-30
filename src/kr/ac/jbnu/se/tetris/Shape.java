@@ -1,4 +1,4 @@
-package kr.ac.jbnu.se.tetris; // 테트리스 블록 패키지
+package kr.ac.jbnu.se.tetris;
 
 import java.util.Random;
 

@@ -14,12 +14,12 @@ import javax.swing.Timer;
 
 public class Board extends JPanel implements ActionListener {
 
-	final int BoardWidth = 10;  // 보드의 넓비
-	final int BoardHeight = 22;	// 보드의 높이
+	final int BoardWidth = 10;
+	final int BoardHeight = 22;
 
 	Timer timer;
-	boolean isFallingFinished = false; // 낙하끝
-	boolean isStarted = false;	// 시작
+	boolean isFallingFinished = false;
+	boolean isStarted = false;
 	boolean isPaused = false;
 	int numLinesRemoved = 0;
 	int curX = 0;
@@ -208,7 +208,7 @@ public class Board extends JPanel implements ActionListener {
 		}
 	}
 
-	private void drawSquare(Graphics g, int x, int y, Tetrominoes shape) {		// 블록 색상 구현
+	private void drawSquare(Graphics g, int x, int y, Tetrominoes shape) {
 		Color colors[] = { new Color(0, 0, 0), new Color(204, 102, 102), new Color(102, 204, 102),
 				new Color(102, 102, 204), new Color(204, 204, 102), new Color(204, 102, 204), new Color(102, 204, 204),
 				new Color(218, 170, 0) };
@@ -227,7 +227,7 @@ public class Board extends JPanel implements ActionListener {
 		g.drawLine(x + squareWidth() - 1, y + squareHeight() - 1, x + squareWidth() - 1, y + 1);
 	}
 
-	class TAdapter extends KeyAdapter {		// 키 조작 클래스
+	class TAdapter extends KeyAdapter {
 		public void keyPressed(KeyEvent e) {
 
 			if (!isStarted || curPiece.getShape() == Tetrominoes.NoShape) {
@@ -244,7 +244,7 @@ public class Board extends JPanel implements ActionListener {
 			if (isPaused)
 				return;
 
-			switch (keycode) {	
+			switch (keycode) {
 			case KeyEvent.VK_LEFT:
 				tryMove(curPiece, curX - 1, curY);
 				break;
